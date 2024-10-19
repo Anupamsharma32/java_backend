@@ -62,7 +62,6 @@ public class MyController {
      @GetMapping("/aboutneww")
      public String newAboutFunc() {
          System.out.println("About new is calling");
-         return "aboutneww";
+         return "aboutneww";  ///jgjkjhjbhjl
      }
 }
-gitg
