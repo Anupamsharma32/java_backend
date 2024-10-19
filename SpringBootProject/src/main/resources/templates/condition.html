@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional Statement in Thymleaf</title>
+</head>
+<body>
+<!--elvis-->
+<h1>Conditional in thymleaf</h1>
+
+<h1>User is <span th:text="${isActive}?'Active':'notActive'"></span></h1>
+
+<!--if-unless-->
+<h1 th:if="${gender} == 'M'">Male</h1>
+<h1 th:unless="${gender} == 'M'">Female</h1>
+<div th:switch="${#lists.size(mylist)}">
+<h1 th:case="'0'">List containes 0 element</h1>
+<h1 th:case="'1'">List containes 1 element</h1>
+ <h1 th:case="*">List containes more than one element</h1>
+
+</div>
+
+</body>
+</html>
